@@ -1,0 +1,21 @@
+<main class="container p-3">
+  <h1>Chat app</h1>
+  <section class="messages-section">
+
+  </section>
+  <section class="input-section">
+    <form class="row" (ngSubmit)="onMessageSubmit()" [formGroup]="msgForm">
+      <div class="col-lg-3">
+        <label for="user" class="me-3">Usuario</label>
+        <input type="text" id="user" formControlName="user" class="w-100">
+      </div>
+      <div class="col-lg-9">
+      <!--       <label for="photo" class="me-3">Foto</label>
+        <input #photoInput type="file" id="photo"> -->
+        <label for="msg" class="me-3">Message</label>
+        <input type="text" formControlName="msg" id="msg" class="w-100">
+      </div>
+      <button class="color-main btn dark d-flex w-50 m-auto justify-content-center align-items-center mt-5">Enviar</button>
+    </form>
+  </section>
+</main>
